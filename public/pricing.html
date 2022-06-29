@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Appaloy</title>
+  <link rel="stylesheet" href="../public/css/output.css">
+  <link rel="stylesheet"
+    href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+
+
+
+  <!--=================================================
+        Start main nav
+    ==================================================-->
+    <header class="top-0 sticky w-full bg-white  shadow-md z-50" >
+      <!-- <div class="border border-opacity-20 border-solid border-gray-700 absolute top-28 w-full"></div> -->
+      <div class="container max-w-7xl px-4 mx-auto">
+        <div class="row">
+          <div class="w-full px-4">
+            <div class="z-20 text-gray-70 dark-mode:text-gray-200 dark-mode:bg-gray-800 ">
+              <div x-data="{ open: false }"
+                class="flex flex-col mx-auto lg:items-center lg:justify-between lg:flex-row">
+                <div class="py-6 flex flex-row items-center justify-between">
+                  <a href="#" class="">
+                    <img src="./src/main-logo.png" class="w-48" alt="" srcset="">
+                  </a>
+                  <div class="flex flex-wrap">
+                    <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline text-gray-900" @click="open = !open">
+                      <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path  x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />                      
+                        <path x-show="open" fill-rule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <nav :class="{'flex': open, 'hidden': !open} "
+                  class="md:text-left text-center flex-col flex-grow pb-4 md:pb-0 hidden lg:flex md:justify-end md:flex-row relative items-center">
+                  <a class="md:w-auto w-full lg:p-0 md:p-3 p-4 md:bg-transparent  mt-0 text-gray-900  text-base lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold  lg:mt-0 hover:text-secondary-color  uppercase "
+                    href="Home.html">Home</a>
+                  <a class="md:w-auto w-full lg:p-4 md:p-3 p-4 md:bg-transparent  mt-0 text-gray-900  text-base lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold  lg:mt-0 hover:text-secondary-color  uppercase "
+                    href="products.html">Products</a>
+                  <a class="md:w-auto w-full lg:p-0 md:p-3 p-4 md:bg-transparent  mt-0 text-secondary-color text-base  lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold bg-transparent lg:mt-0  hover:text-secondary-color  uppercase "
+                  href="pricing.html">Pricing</a>
+                  <a id="dropdown" class="md:w-auto w-full relative lg:p-0 md:p-3 p-4 md:bg-transparent  dropdown mt-0 text-gray-900 text-base lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold  lg:mt-0 hover:text-secondary-color  uppercase "
+                    href="javascript:;">Pages +                  
+                  </a>
+                  <ul class="md:w-60 w-full hidden md:text-left text-center md:absolute lg:top-20  md:top-24  right-20">
+                    <li class="">
+                      <a class="p-4 mt-0 text-gray-700 bg-gray-200 block  text-base lg:px-4 lg:py-3 hover:bg-secondary-color  font-semibold   hover:text-gray-900  uppercase "
+                        href="single-product.html">Single Product</a>
+                    </li>
+                    <li class="">
+                      <a class="p-4 mt-0 text-gray-700 bg-gray-200 block text-base  lg:px-4 lg:py-3 hover:bg-secondary-color  font-semibold bg-transparent  hover:text-gray-900  uppercase "
+                        href="FAQ.html">FAQ</a>
+                    </li>
+                    <li class="">
+                      <a class="p-4 mt-0 text-gray-700 bg-gray-200 block text-base  lg:px-4 lg:py-3 hover:bg-secondary-color  font-semibold bg-transparent  hover:text-gray-900  uppercase "
+                        href="tram&condition.html">Trams & Condition</a>
+                    </li>
+                  </ul>               
+                  <a class="md:w-auto w-full lg:p-0 md:p-3 p-4 md:bg-transparent  mt-0 text-gray-900 text-base  lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold bg-transparent lg:mt-0  hover:text-secondary-color focus:text-secondary-color focus:outline-none focus:shadow-outline uppercase "
+                    href="about.html">About Us</a>
+                    <a class="md:w-auto w-full lg:p-0 md:p-3 p-4 md:bg-transparent  mt-0 text-gray-900 text-base  lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold bg-transparent lg:mt-0  hover:text-secondary-color focus:text-secondary-color focus:outline-none focus:shadow-outline uppercase "
+                    href="contacts.html">Contact Us</a>
+                </nav>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </header>
+   <!--=================================================
+        End main nav
+    ==================================================-->
+    <!--=================================================
+      Start Bradclumb
+    ==================================================-->
+  <div class="bg-primary-color pt-20 pb-16">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="row">
+        <div class="w-full px-4">
+          <div class=" text-center text-white space-y-3">
+            <p class=" text-3xl font-semibold">Pricing Plan</p>
+            <p class=" text-lg">Home / <a href="pricing.html" class="hover:text-secondary-color">Pricing</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=================================================
+    End Bradclumb
+  ==================================================-->
+
+
+    <!--=================================================
+      Start Pricing Table Section 
+  ==================================================-->
+  <section>
+    <div class="py-24 text-primary-color bg-white">
+      <div class="container max-w-6xl mx-auto px-4" x-data="setup()">
+        <div class="row">
+          <main class="w-full px-4">
+            <div class="text-center">
+              <h1 class="mb-4 text-4xl font-semibold">
+                Our Pricing Plan
+              </h1>
+              <p class=" text-gray-500">
+                The Digital Marketplace is a simple, open platform bringing government</br>buyers and digital sellers together.
+              </p>
+            </div>
+    
+            <!-- Plan switch -->
+            <div class="flex items-center justify-center mt-10 space-x-4">
+              <span class="text-base font-medium">Bill Monthly</span>
+              <button
+                      class="relative rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                      x-cloak
+                      @click="billPlan == 'monthly' ? billPlan = 'annually' : billPlan = 'monthly'"
+                      >
+                <div class="w-16 h-8 transition bg-primary-color rounded-full shadow-md outline-none"></div>
+                <div
+                    class="absolute inline-flex items-center justify-center w-6 h-6 transition-all duration-200 ease-in-out transform bg-white rounded-full shadow-sm top-1 left-1"
+                    :class="{ 'translate-x-0': billPlan == 'monthly', 'translate-x-8': billPlan == 'annually' }"
+                    ></div>
+              </button>
+              <span class="text-base font-medium">Bill Annually</span>
+            </div>
+    
+            <!-- Plans -->
+            <div
+                class="flex flex-col items-center justify-center mt-16 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0"
+                >
+              <template x-for="(plan, i) in plans" x-key="i">
+                <section class="flex flex-col w-full max-w-sm p-12 space-y-6 bg-white rounded-lg shadow-md">
+                  <!-- Price -->
+                  <div class="flex-shrink-0">
+                    <span
+                          class="text-4xl font-medium tracking-tight"
+                          :class="plan.name == 'Basic' ? 'text-secondary-color hover:bg-color-left ' : ''"
+                          x-text="`$${billPlan == 'monthly' ? plan.price.monthly : plan.price.annually}`"
+                          ></span>
+                    <span class="text-gray-400" x-text="billPlan == 'monthly' ? '/month' : '/year'"></span>
+                  </div>
+    
+                  <!--  -->
+                  <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+                    <h2 class="text-2xl font-normal" x-text="plan.name"></h2>
+                    <p class="text-sm text-gray-400" x-text="plan.discretion"></p>
+                  </div>
+    
+                  <!-- Features -->
+                  <ul class="flex-1 space-y-4">
+                    <template x-for="(feature, i) in plan.features" x-key="i">
+                      <li class="flex items-start">
+                        <svg
+                            class="w-6 h-6 text-secondary-color"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            >
+                          <path
+                                fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"
+                                />
+                        </svg>
+                        <span class="ml-3 text-base font-medium" x-text="feature"></span>
+                      </li>
+                    </template>
+                  </ul>
+    
+                  <!-- Button -->
+                  <div class="flex-shrink-0 pt-4">
+                    <button
+                        class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 transition-colors border rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        :class="plan.name == 'Basic' ? 'bg-color-right text-white hover:bg-color-left' : 'hover:bg-primary-colorhover:text-white'"
+                        x-text="`Get ${plan.name}`"
+                        >
+                    </button>
+                  </div>
+                </section>
+              </template>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </section>
+<!--=================================================
+    End Pricing Table Section 
+==================================================-->
+
+
+
+
+
+   <!--=================================================
+      Start Cuntedown Section 
+  ==================================================-->
+  <section>
+    <div class="py-24 bg-gray-50 ">
+      <div class="container max-w-6xl mx-auto px-4">
+        <div class="row  md:space-y-0 space-y-6 ">
+          <div class="lg:w-1/4 md:w-1/2  w-full px-4 lg:pb-0 md:pb-8 pb-0">
+              <div class="bg-color-right text-center text-white space-y-2 lg:py-8 xl:py-12 py-12 sm:mb-0 mb-7">
+                <div class=" flex justify-center">
+                  <img class="w-20" src="./src/004-1st-place.png" alt="">
+                </div>
+                  <p class=" text-4xl font-semibold pt-3">2,025+</p>
+                  <p>Amazing products</p>
+              </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2  w-full px-4 lg:pb-0 md:pb-8 pb-0 ">
+              <div class="bg-color-right text-center text-white space-y-2 lg:py-8 xl:py-12 py-12 sm:mb-0 mb-7">
+                <div class=" flex justify-center">
+                  <img class="w-20" src="./src/003-people.png" alt="">
+                </div>
+                  <p class=" text-4xl font-semibold pt-3">630,168+</p>
+                  <p>Total Downloads</p>
+              </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2  w-full px-4">
+              <div class="bg-color-right text-center text-white space-y-2 lg:py-8 xl:py-12 py-12 sm:mb-0 mb-7">
+                <div class=" flex justify-center">
+                  <img class="w-20" src="./src/002-happy.png" alt="">
+                </div>
+                  <p class=" text-4xl font-semibold pt-3">35,620+</p>
+                  <p>Happy Customers</p>
+              </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2  w-full px-4">
+              <div class=" bg-color-right text-center text-white space-y-2 lg:py-8 xl:py-12 py-12">
+                <div class=" flex justify-center">
+                  <img class="w-20" src="./src/001-cloud-computing.png" alt="">
+                </div>
+                  <p class=" text-4xl font-semibold pt-3">100+</p>
+                  <p>Team Members</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================================
+      End Cuntedown Section 
+  ==================================================-->
+
+
+
+ <!--=================================================
+      Start : Footer Widget
+  ==================================================-->
+  <footer class="relative bg-primary-color">
+    <div class="container max-w-7xl mx-auto px-4  pb-8">
+      <div class="row">
+        <div class="w-full px-4">
+          <div class="py-20">
+            <h4 class="text-white text-center text-lg font-bold lg:text-3xl">Follow us For further information</h4>
+            <div class="flex justify-center mt-6">
+              <div class="sm:bg-white bg-none rounded-full lg:w-2/5 sm:w-3/5 w-full ">
+                <div class="sm:flex flex-wrap flex-none justify-between">
+                  <input type="email" class="m-1 p-4 text-gray-600 sm:w-auto w-full text-sm rounded-full focus:outline-none"
+                    placeholder="Enter your email*">
+                  <button
+                    class="sm:w-auto w-full py-4 m-1 md:px-8 px-5  text-sm bg-color-right hover:bg-color-left rounded-full font-semibold uppercase lg:w-auto">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-3/12 sm:w-6/12 px-4 md:py-0 py-4">
+          <div class="">
+            <div class="pb-6 flex sm:justify-start justify-center">
+              <img src="./src/main-logo-w.png" alt="" class="w-48">
+            </div>
+            <p class="text-white text-center sm:text-left leading-7">Build and Earn with your online store with lots of cool and exclusive
+              features</p>
+            <div class="mt-6 lg:mb-0 mb-6 lg:space-x-3 space-y-2 text-center sm:text-left">
+              <a href="#"
+                class="text-white p-3 w-10 h-10 shadow-lg rounded-full bg-color-right hover:bg-color-left  text-xl inline-flex items-center justify-center">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#"
+                class="text-white p-3 w-10 h-10 shadow-lg rounded-full bg-color-right hover:bg-color-left text-xl inline-flex items-center justify-center">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+
+              </a>
+              <a href="#"
+                class="text-white p-3 w-10 h-10 shadow-lg rounded-full bg-color-right hover:bg-color-left text-xl inline-flex items-center justify-center">
+                <i class="fa fa-dribbble" aria-hidden="true"></i>
+
+              </a>
+              <a href="#"
+                class="text-white p-3 w-10 h-10 shadow-lg rounded-full bg-color-right hover:bg-color-left text-xl inline-flex items-center justify-center">
+                <i class="fa fa-github" aria-hidden="true"></i>
+
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-3/12 sm:w-6/12 px-4 md:py-0 py-4">
+          <div class="">
+              <div class="text-white pb-6">
+                <h3 class="text-2xl font-bold sm:text-left text-center">Resources</h3>
+              </div>
+              <div class="">
+                <ul class="space-y-4 text-center sm:text-left">
+                  <li class=" text-white hover:text-secondary-color"><a href="products.html"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Products</a></li>
+                  <li class=" text-white hover:text-secondary-color"><a href="#"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Product Cart</a></li>
+                  <li class=" text-white hover:text-secondary-color"><a href="#"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Checkout</a></li>
+                  <li class=" text-white hover:text-secondary-color"><a href="#"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Latest News</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class="w-full md:w-3/12 sm:w-6/12 px-4 md:py-0 py-4">
+          <div class="">
+              <div class="text-white pb-6">
+                <h3 class="text-2xl font-bold sm:text-left text-center">Useful Links</h3>
+              </div>
+              <div class="">
+                <ul class="space-y-4 sm:text-left text-center">
+                  <li class=" text-white hover:text-secondary-color"><a href="about.html"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> About Us</a></li>
+                  <li class=" text-white hover:text-secondary-color"><a href="contacts.html"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Contact Us</a></li>
+                  <li class=" text-white hover:text-secondary-color"><a href="pricing.html"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Pricing</a></li>
+                  <li class=" text-white hover:text-secondary-color"><a href="tram&condition.html"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Tram & Condition</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class="w-full md:w-3/12 sm:w-6/12 px-4 md:py-0 py-4">
+          <div class="">
+              <div class="text-white pb-6">
+                <h3 class="text-2xl font-bold sm:text-left text-center">Market Earnings</h3>
+              </div>
+              <div class="text-white">
+                <p class=" sm:text-left text-center">Online store with lots of cool and exclusive features</p>
+                <div class="flex flex-wrap">
+                  <div class="py-3 sm:w-1/2 w-full sm:text-left text-center">
+                    <p class="text-xl font-semibold py-4">Item Sold</p>
+                    <p class="text-3xl font-bold">32567</p>
+                  </div>
+                  <div class="py-4 sm:w-1/2 w-full sm:text-left text-center">
+                    <p class="text-xl font-semibold py-4">Item Sold</p>
+                    <p class="text-3xl font-bold">32567</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 border-t border-opacity-40 py-6">
+      <div class="row">            
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center py-4">
+          <div class="text-white text-base py-1">
+            © Copyright 2021 | <a href="#" class="hover:text-secondary-color" >Codemen.Org</a> | All right reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--=================================================
+      End : Footer Widget
+  ==================================================-->
+
+  <!-- custom javascript -->
+  <script src="./js/custom.js"></script>
+  <!-- Pakages javascript -->
+  <script src="./js/alpine.min.js"></script>
+</body>
+
+</html>

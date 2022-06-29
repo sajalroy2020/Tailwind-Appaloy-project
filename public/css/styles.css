@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.row{
+  @apply flex flex-wrap -mx-4;
+}
+.bg-third-900{
+  background-color: #0D223E;
+}
+.text-third-900{
+  color: #0D223E;
+}
+[x-cloak] {
+  display: none;
+  }
+.left-22{
+  left:22%;
+}
+.bottom-26{
+  bottom: 7.5rem;
+}
+.left-45p{
+  left:45%;
+}
+/* ==================================================indigo version============================================================ */
+/* theme color */
+/* .primary-color{
+  @apply bg-indigo-700;
+}
+.primary-hover-color{
+  @apply hover:bg-indigo-700;
+}
+.secondary-hover-bg-color{
+  @apply hover:bg-green-500;
+}
+.secondary-bg-color{
+  @apply bg-green-400;
+} */
+
+/* theme border color */
+/* .primary-border-color{
+  @apply border-indigo-700;
+}
+.secondary-border-color{
+  @apply border-green-400;
+} */
+/* theme text color */
+/* .primary-text-color{
+  @apply text-indigo-700;
+} */
+
+
+/* secondary text color */
+/* .secondary-text-color{
+  @apply text-green-400;
+}
+.secondary-hover-text-color{
+  @apply hover:text-green-500;
+} */
+/* all hover gradient color */
+/* .primary-hover-color{
+  @apply hover:bg-indigo-700;
+}
+.secondary-hover-bg-color{
+  @apply hover:bg-green-500;
+}
+.bg-color-right{
+  @apply bg-gradient-to-r from-green-400 to-blue-400 ;
+}
+.bg-color-left:hover{
+  @apply bg-gradient-to-l from-blue-300 to-green-400 ; 
+}*/
+
+/* ======================================indigo version==================================================== */
+
+
+
+
+/* ==============================================Orange Version================================================================ */
+
+/* theme color */
+.primary-color{
+  @apply bg-gray-700;
+}
+.primary-hover-color{
+  @apply hover:bg-gray-700;
+}
+.secondary-hover-bg-color{
+  @apply hover:bg-yellow-500;
+}
+.secondary-bg-color{
+  @apply bg-yellow-400;
+}
+
+/* theme border color */
+.primary-border-color{
+  @apply border-gray-700;
+}
+.secondary-border-color{
+  @apply border-yellow-400;
+}
+/* theme text color */
+.primary-text-color{
+  @apply text-gray-700;
+}
+
+
+/* secondary text color */
+.secondary-text-color{
+  @apply text-yellow-400;
+}
+.secondary-hover-text-color{
+  @apply hover:text-yellow-500;
+}
+/* all hover gradient color */
+.bg-color-right{
+  @apply bg-gradient-to-r from-yellow-500 to-yellow-600 ;
+}
+@variants hover {
+  .bg-color-left{
+    background-image: linear-gradient(to left, var(--tw-gradient-stops));
+    --tw-gradient-from: #f59e0b;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(239, 68, 68, 0));
+    --tw-gradient-to: #ef4444;
+
+  }
+}
+
+/* ============================================Orange Version============================================== */

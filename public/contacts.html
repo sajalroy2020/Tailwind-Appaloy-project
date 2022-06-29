@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Appaloy</title>
+  <link rel="stylesheet" href="../public/css/output.css">
+  <link rel="stylesheet"
+    href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <!--=================================================
+        Start main nav
+    ==================================================-->
+    <header class="top-0 sticky w-full bg-white  shadow-md z-50" >
+      <!-- <div class="border border-opacity-20 border-solid border-gray-700 absolute top-28 w-full"></div> -->
+      <div class="container max-w-7xl px-4 mx-auto">
+        <div class="row">
+          <div class="w-full px-4">
+            <div class="z-20 text-gray-70 dark-mode:text-gray-200 dark-mode:bg-gray-800 ">
+              <div x-data="{ open: false }"
+                class="flex flex-col mx-auto lg:items-center lg:justify-between lg:flex-row">
+                <div class="py-6 flex flex-row items-center justify-between">
+                  <a href="#" class="">
+                    <img src="./src/main-logo.png" class="w-48" alt="" srcset="">
+                  </a>
+                  <div class="flex flex-wrap">
+                    <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline text-gray-900" @click="open = !open">
+                      <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path  x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />                      
+                        <path x-show="open" fill-rule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <nav :class="{'flex': open, 'hidden': !open} "
+                  class="md:text-left text-center flex-col flex-grow pb-4 md:pb-0 hidden lg:flex md:justify-end md:flex-row relative items-center">
+                  <a class="md:w-auto w-full lg:p-0 md:p-3 p-4 md:bg-transparent  mt-0 text-gray-900  text-base lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold  lg:mt-0 hover:text-secondary-color  uppercase "
+                    href="Home.html">Home</a>
+                  <a class="md:w-auto w-full lg:p-4 md:p-3 p-4 md:bg-transparent  mt-0 text-gray-900  text-base lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold  lg:mt-0 hover:text-secondary-color  uppercase "
+                    href="products.html">Products</a>
+                  <a class="md:w-auto w-full lg:p-0 md:p-3 p-4 md:bg-transparent  mt-0 text-gray-900 text-base  lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold bg-transparent lg:mt-0  hover:text-secondary-color  uppercase "
+                  href="pricing.html">Pricing</a>
+                  <a id="dropdown" class="md:w-auto w-full relative lg:p-0 md:p-3 p-4 md:bg-transparent  dropdown mt-0 text-gray-900 text-base lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold  lg:mt-0 hover:text-secondary-color  uppercase "
+                    href="javascript:;">Pages +                  
+                  </a>
+                  <ul class="md:w-60 w-full hidden md:text-left text-center md:absolute lg:top-20  md:top-24  right-20">
+                    <li class="">
+                      <a class="p-4 mt-0 text-gray-700 bg-gray-200 block  text-base lg:px-4 lg:py-3   hover:bg-secondary-color  font-semibold   hover:text-gray-900  uppercase "
+                        href="single-product.html">Single Product</a>
+                    </li>
+                    <li class="">
+                      <a class="p-4 mt-0 text-gray-700 bg-gray-200 block text-base  lg:px-4 lg:py-3   hover:bg-secondary-color  font-semibold bg-transparent  hover:text-gray-900  uppercase "
+                        href="FAQ.html">FAQ</a>
+                    </li>
+                    <li class="">
+                      <a class="p-4 mt-0 text-gray-700 bg-gray-200 block text-base  lg:px-4 lg:py-3   hover:bg-secondary-color  font-semibold bg-transparent  hover:text-gray-900  uppercase "
+                        href="tram&condition.html">Trams & Condition</a>
+                    </li>
+                  </ul>               
+                  <a class="md:w-auto w-full lg:p-0 md:p-3 p-4 md:bg-transparent  mt-0 text-gray-900 text-base  lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold bg-transparent lg:mt-0  hover:text-secondary-color focus:text-secondary-color focus:outline-none focus:shadow-outline uppercase "
+                    href="about.html">About Us</a>
+                    <a class="md:w-auto w-full lg:p-0 md:p-3 p-4 md:bg-transparent  mt-0 text-secondary-color text-base  lg:px-4 lg:py-2 md:hover:bg-transparent hover:bg-gray-900 md:mt-2 font-semibold bg-transparent lg:mt-0  hover:text-secondary-color focus:text-secondary-color focus:outline-none focus:shadow-outline uppercase "
+                    href="contacts.html">Contact Us</a>
+                </nav>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </header>
+   <!--=================================================
+        End main nav
+    ==================================================-->
+    <!--=================================================
+      Start Bradclumb
+    ==================================================-->
+  <div class="bg-primary-color pt-20 pb-16">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="row">
+        <div class="w-full px-4">
+          <div class=" text-center text-white space-y-3">
+            <p class=" text-3xl font-semibold">Contact</p>
+             <p class=" text-lg">Home / <a href="contacts.html" class="hover:text-secondary-color">Contact</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=================================================
+    End Bradclumb
+  ==================================================-->
+
+
+
+
+  <!--=================
+        Get In Tuch Start
+    =================-->
+
+    <div class="py-24">
+      <div class="container mx-auto px-4 max-w-6xl">
+          <div class="row">
+              <div class="w-full px-4">
+                  <div class=" text-center space-y-3 py-8">
+                      <p class=" text-4xl font-semibold   text-primary-color">Get In Touch</p>
+                      <div>
+                          <p class=" text-gray-400">Customer Success agents has a sole goal of Making You Successful! That is why our </p>
+                      <p class=" text-gray-400">dedicated support team works 24/7/365 to help you.</p>
+                      </div>
+                  </div>
+              </div>   
+          </div>
+          <div class="row py-10 text-sm">
+              <div class="md:w-1/2 w-full px-4 md:my-0 my-8">
+                  <div>
+                      <input class=" border p-5 w-full outline-none border-gray-300" type="text" name="firstname" id="firstname" placeholder="First Name">
+                  </div>
+              </div>
+              <div class="md:w-1/2 w-full px-4">
+                  <div>
+                      <input class=" border p-5 w-full outline-none border-gray-300" type="text" name="lastname" id="lastname" placeholder="First Name">
+                  </div>
+              </div>
+              <div class=" w-full">
+                  <div class=" w-full px-4 my-8">
+                      <input class="border p-5 w-full outline-none border-gray-300" type="email" name="email" id="email" placeholder="Email">
+                  </div>
+                  <div class=" w-full px-4 my-8">
+                      <input class="border p-5 w-full outline-none border-gray-300" type="text" name="subject" id="subject" placeholder="Subject">
+                  </div>
+                  <div class=" w-full px-4 my-8">
+                      <textarea class="border w-full p-5 outline-none border-gray-300" name="" id=""  rows="10" placeholder="Description"></textarea>
+                  </div>
+              </div>
+              <div class=" w-full px-4">
+                  <div class=" text-center py-5">
+                      <button class=" py-4 text-xl text-white  w-full bg-color-right hover:bg-color-left" type="submit">Submit</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<!--=================
+      Get In Tuch End
+  =================-->
+
+<!--=================
+      Get In Tuch Start
+  =================-->
+
+  <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.568800663872!2d89.55137371425435!3d22.818436285056773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff8fff093a85eb%3A0xf4d367ff053cf71c!2sCodemen!5e0!3m2!1sbn!2sbd!4v1634645082067!5m2!1sbn!2sbd"class="w-full" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+<!--=================
+      Get In Tuch End
+  =================-->
+
+
+
+ <!--=================================================
+      Start : Footer Widget
+  ==================================================-->
+  <footer class="relative  bg-primary-color">
+    <div class="container max-w-7xl mx-auto px-4  pb-8">
+      <div class="row">
+        <div class="w-full px-4">
+          <div class="py-20">
+            <h4 class="text-white text-center text-lg font-bold lg:text-3xl">Follow us For further information</h4>
+            <div class="flex justify-center mt-6">
+              <div class="sm:bg-white bg-none rounded-full lg:w-2/5 sm:w-3/5 w-full ">
+                <div class="sm:flex flex-wrap flex-none justify-between">
+                  <input type="email" class="m-1 p-4 text-gray-600 sm:w-auto w-full text-sm rounded-full focus:outline-none"
+                    placeholder="Enter your email*">
+                  <button
+                    class="sm:w-auto w-full py-4 m-1 md:px-8 px-5  text-sm bg-color-right hover:bg-color-left rounded-full font-semibold uppercase lg:w-auto">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-3/12 sm:w-6/12 px-4 md:py-0 py-4">
+          <div class="">
+            <div class="pb-6 flex sm:justify-start justify-center">
+              <img src="./src/main-logo-w.png" alt="" class="w-48">
+            </div>
+            <p class="text-white text-center sm:text-left leading-7">Build and Earn with your online store with lots of cool and exclusive
+              features</p>
+            <div class="mt-6 lg:mb-0 mb-6 lg:space-x-3 space-y-2 text-center sm:text-left">
+              <a href="#"
+                class="text-white p-3 w-10 h-10 shadow-lg rounded-full bg-color-right hover:bg-color-left  text-xl inline-flex items-center justify-center">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#"
+                class="text-white p-3 w-10 h-10 shadow-lg rounded-full bg-color-right hover:bg-color-left text-xl inline-flex items-center justify-center">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+
+              </a>
+              <a href="#"
+                class="text-white p-3 w-10 h-10 shadow-lg rounded-full bg-color-right hover:bg-color-left text-xl inline-flex items-center justify-center">
+                <i class="fa fa-dribbble" aria-hidden="true"></i>
+
+              </a>
+              <a href="#"
+                class="text-white p-3 w-10 h-10 shadow-lg rounded-full bg-color-right hover:bg-color-left text-xl inline-flex items-center justify-center">
+                <i class="fa fa-github" aria-hidden="true"></i>
+
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-3/12 sm:w-6/12 px-4 md:py-0 py-4">
+          <div class="">
+              <div class="text-white pb-6">
+                <h3 class="text-2xl font-bold sm:text-left text-center">Resources</h3>
+              </div>
+              <div class="">
+                <ul class="space-y-4 text-center sm:text-left">
+                  <li class="hover:text-secondary-color text-white hover:text-secondary-color"><a href="products.html"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Products</a></li>
+                  <li class="hover:text-secondary-color text-white hover:text-secondary-color"><a href="#"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Product Cart</a></li>
+                  <li class="hover:text-secondary-color text-white hover:text-secondary-color"><a href="#"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Checkout</a></li>
+                  <li class="hover:text-secondary-color text-white hover:text-secondary-color"><a href="#"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Latest News</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class="w-full md:w-3/12 sm:w-6/12 px-4 md:py-0 py-4">
+          <div class="">
+              <div class="text-white pb-6">
+                <h3 class="text-2xl font-bold sm:text-left text-center">Useful Links</h3>
+              </div>
+              <div class="">
+                <ul class="space-y-4 sm:text-left text-center">
+                  <li class="hover:text-secondary-color text-white hover:text-secondary-color"><a href="about.html"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> About Us</a></li>
+                  <li class="hover:text-secondary-color text-white hover:text-secondary-color"><a href="contacts.html"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Contact Us</a></li>
+                  <li class="hover:text-secondary-color text-white hover:text-secondary-color"><a href="pricing.html"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Pricing</a></li>
+                  <li class="hover:text-secondary-color text-white hover:text-secondary-color"><a href="tram&condition.html"><i class="mr-2 font-light text-base fa fa-angle-right" aria-hidden="true"></i> Tram & Condition</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class="w-full md:w-3/12 sm:w-6/12 px-4 md:py-0 py-4">
+          <div class="">
+              <div class="text-white pb-6">
+                <h3 class="text-2xl font-bold sm:text-left text-center">Market Earnings</h3>
+              </div>
+              <div class="text-white">
+                <p class=" sm:text-left text-center">Online store with lots of cool and exclusive features</p>
+                <div class="flex flex-wrap">
+                  <div class="py-3 sm:w-1/2 w-full sm:text-left text-center">
+                    <p class="text-xl font-semibold py-4">Item Sold</p>
+                    <p class="text-3xl font-bold">32567</p>
+                  </div>
+                  <div class="py-4 sm:w-1/2 w-full sm:text-left text-center">
+                    <p class="text-xl font-semibold py-4">Item Sold</p>
+                    <p class="text-3xl font-bold">32567</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 border-t border-opacity-40 py-6">
+      <div class="row">            
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center py-4">
+          <div class="text-white text-base py-1">
+            © Copyright 2021 | <a href="#" class="hover:text-secondary-color" >Codemen.Org</a> | All right reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--=================================================
+      End : Footer Widget
+  ==================================================-->
+
+  <!-- custom javascript -->
+  <script src="./js/custom.js"></script>
+  <!-- Pakages javascript -->
+  <script src="./js/alpine.min.js"></script>
+</body>
+
+</html>
